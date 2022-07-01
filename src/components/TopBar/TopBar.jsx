@@ -2,6 +2,8 @@ import {Link} from 'react-router-dom'
 import './TopBar.css'
 
 const TopBar = () => {
+  const user = true;
+
   return (
     <div className='top'>
       <div className="topLeft">
@@ -22,20 +24,27 @@ const TopBar = () => {
           <li className="topListItem">
             <Link className='link' to="/write">WRITE</Link>
           </li>
+          <li className="topListItem">LOGOUT</li>
         </ul>
       </div>
       <div className="topRight">
-        <img 
+        {
+          user ? (
+            <img 
         className="topImg"
         src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
         alt="top-image" 
          />
 
-         <ul className='topList'>
-          <li className="topListItem">
-            <Link className='link' to="/register">REGISTER </Link>
-          </li>
-         </ul>
+
+          ): (
+            <ul className='topList'>
+            <li className="topListItem">
+              <Link className='link' to="/register">REGISTER </Link>
+            </li>
+           </ul>
+          )
+        }
          <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
