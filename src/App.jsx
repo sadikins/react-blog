@@ -13,13 +13,10 @@ function App() {
       <Routes>
 
         <Route exact path="/" element={<Homepage />}/>
-            
         <Route path='/write' element={<Write/>}/>
         <Route path='/single' element={<Single/>}/>
         <Route path='/login' element={<Login/>}/>
           
-
-
       </Routes>
 
     </BrowserRouter>
