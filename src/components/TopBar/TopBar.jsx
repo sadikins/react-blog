@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import './topbar.css'
+import './TopBar.css'
 
 const TopBar = () => {
   return (
@@ -24,7 +24,20 @@ const TopBar = () => {
           </li>
         </ul>
       </div>
-      <div className="topRight"></div>
+      <div className="topRight">
+        <img 
+        className="topImg"
+        src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" 
+        alt="top-image" 
+         />
+
+         <ul className='topList'>
+          <li className="topListItem">
+            <Link className='link' to="/register">REGISTER </Link>
+          </li>
+         </ul>
+         <i className="topSearchIcon fas fa-search"></i>
+      </div>
     </div>
   )
 }
